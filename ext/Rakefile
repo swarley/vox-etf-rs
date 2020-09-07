@@ -1,0 +1,16 @@
+require 'thermite/tasks'
+
+dir = File.dirname(File.dirname(__FILE__))
+
+# @!visibility private
+module Thermite
+  # @!visibility private
+  class Config
+    def ruby_extension_path
+      ruby_path('lib/vox/etf', shared_library)
+    end
+  end
+end
+
+Thermite::Tasks.new(cargo_project_path: dir, ruby_project_path: dir)
+task default: %(thermite:build)

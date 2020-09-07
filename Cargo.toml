@@ -1,0 +1,19 @@
+[package]
+name = "vox_etf"
+version = "0.1.0"
+authors = ["Matthew Carey <matthew.b.carey@gmail.com>"]
+edition = "2018"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+# rutie = "0.7.0"
+eetf = "0.4"
+num-bigint = "0.2.6"
+
+[dependencies.rutie]
+git = "https://github.com/swarley/rutie"
+
+[lib]
+name = "vox_etf"
+crate-type = ["dylib"]
